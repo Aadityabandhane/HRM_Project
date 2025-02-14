@@ -28,14 +28,17 @@
             <a class="nav-link text-red" id="menu" aria-current="page" href="{% url 'add' %}">Dashboard</a>
           </li>
           <li class="nav-item">
-            <span class="navbar-text">Admin: {{ request.user }}</span>
+            <a class="nav-link text-red" id="menu" aria-current="page" href="{% url 'roles' %}">Roles</a>
+          </li>
+          <li class="nav-item">
+            <span class="navbar-text">Welcome: {{ request.user }}</span>
           </li>
         {% elif user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link text-red" id="Register" href="#">Profile Edit</a>
           </li>
           <li class="nav-item">
-            <span class="navbar-text">User: {{ request.user }}</span>
+            <span class="navbar-text">Welcome: {{ request.user }}</span>
           </li>
         {% else %}
           <li class="nav-item">
